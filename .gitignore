@@ -6,3 +6,4 @@ review/
 
 # per-company internal metadata (phone/score/salesReason) generated alongside each page
 **/company.json
+painting/index.html
