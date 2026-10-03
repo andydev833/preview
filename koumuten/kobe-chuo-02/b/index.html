@@ -1,0 +1,296 @@
+<title>ワカバヤシ工務店 住まいの記録</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="参考: 溝田建築設計株式会社（mizota-ks.com）。工務店向けサンプルHP、写真主体・上質系パターン。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FCF5EB;
+    --surface:#FFFFFF;
+    --panel:#EBE4D9;
+    --ink:#362E26;
+    --ink-soft:#786B5C;
+    --wood:#8A6A45;
+    --wood-deep:#6E5233;
+    --line:#DED4C4;
+    --on-wood:#FCF5EB;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#1E1A15;
+      --surface:#26211A;
+      --panel:#332C22;
+      --ink:#F1E9D9;
+      --ink-soft:#B7AA94;
+      --wood:#C6A06B;
+      --wood-deep:#A9835A;
+      --line:#3D362B;
+      --on-wood:#1E1A15;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#1E1A15;
+    --surface:#26211A;
+    --panel:#332C22;
+    --ink:#F1E9D9;
+    --ink-soft:#B7AA94;
+    --wood:#C6A06B;
+    --wood-deep:#A9835A;
+    --line:#3D362B;
+    --on-wood:#1E1A15;
+  }
+
+  *{box-sizing:border-box;}
+  body{
+    background:var(--bg);color:var(--ink);
+    font-family:"Noto Sans JP",sans-serif;line-height:1.85;
+    padding-inline:20px;-webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{margin:0;line-height:1.5;text-wrap:balance;font-weight:500;}
+  p{margin:0;}
+  a{color:inherit;}
+  img,svg{max-width:100%;display:block;}
+  .wrap{max-width:1040px;margin-inline:auto;}
+
+  .sample-bar{
+    position:relative;left:50%;width:100vw;margin-left:-50vw;
+    background:var(--ink);color:var(--bg);
+    text-align:center;font-size:.78rem;padding-block:7px;
+  }
+
+  header.site{display:flex;justify-content:space-between;align-items:center;padding-block:22px;gap:12px;flex-wrap:wrap;}
+  .brand{font-size:1.1rem;font-weight:700;}
+  .pill{
+    display:inline-flex;align-items:center;gap:8px;
+    border:1px solid var(--line);border-radius:999px;padding:9px 18px;
+    font-size:.84rem;text-decoration:none;background:var(--surface);
+  }
+
+  /* ---- hero: honest photo placeholder + script headline ---- */
+  .hero{position:relative;border-radius:4px;overflow:hidden;margin-top:6px;}
+  .photo-slot{
+    aspect-ratio:16/10;background:var(--panel);
+    display:flex;align-items:center;justify-content:center;
+    position:relative;
+  }
+  .photo-slot .hint{
+    position:absolute;bottom:16px;right:16px;
+    font-size:.72rem;color:var(--ink-soft);
+    background:var(--surface);border:1px dashed var(--line);
+    padding:6px 12px;border-radius:2px;
+  }
+  .photo-slot svg{width:40px;height:40px;stroke:var(--wood-deep);opacity:.5;}
+  .hero-copy{
+    position:absolute;left:0;right:0;bottom:0;padding:60px 30px 30px;
+    background:linear-gradient(to top, rgba(20,16,10,.72), rgba(20,16,10,0));
+    color:#fff;
+  }
+  .hero-copy h1{
+    font-family:"Klee One",serif;font-weight:600;
+    font-size:clamp(1.7rem,4.6vw,2.6rem);color:#fff;
+  }
+  .hero-copy p{margin-top:10px;font-size:.9rem;max-width:34ch;opacity:.94;}
+
+  .news-strip{
+    background:var(--surface);border:1px solid var(--line);
+    margin-top:-1px;padding:18px 24px;display:flex;gap:16px;align-items:baseline;flex-wrap:wrap;
+  }
+  .news-strip .tag{font-size:.72rem;color:var(--wood-deep);font-weight:700;}
+  .news-strip p{font-size:.86rem;}
+
+  section{padding-block:56px;}
+  .section-head{max-width:56ch;margin-bottom:28px;}
+  .section-head h2{font-size:1.5rem;}
+  .section-head p{margin-top:10px;color:var(--ink-soft);font-size:.9rem;}
+
+  /* ---- reasons: quiet rows, no icon tiles ---- */
+  .reason-list{border-top:1px solid var(--line);}
+  .reason-row{padding-block:24px;border-bottom:1px solid var(--line);}
+  .reason-row h3{font-size:1rem;font-weight:700;}
+  .reason-row p{margin-top:8px;font-size:.86rem;color:var(--ink-soft);max-width:60ch;}
+
+  /* ---- services chips ---- */
+  .chip-row{display:flex;flex-wrap:wrap;gap:10px;}
+  .chip{padding:9px 18px;border-radius:999px;background:var(--surface);border:1px solid var(--line);font-size:.86rem;}
+
+  /* ---- works grid with placeholder frames ---- */
+  .works-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
+  @media (max-width:700px){.works-grid{grid-template-columns:1fr;}}
+  .work-card .frame{
+    aspect-ratio:4/3;background:var(--panel);border-radius:4px;
+    display:flex;align-items:center;justify-content:center;margin-bottom:14px;
+    border:1px dashed var(--line);
+  }
+  .work-card .frame svg{width:28px;height:28px;stroke:var(--wood-deep);opacity:.55;}
+  .work-card h3{font-size:1rem;font-weight:700;}
+  .work-card .meta{margin-top:6px;font-size:.82rem;color:var(--ink-soft);}
+  .work-card .price{margin-top:10px;font-weight:700;font-size:1.2rem;color:var(--wood-deep);font-variant-numeric:tabular-nums;}
+
+  /* ---- pricing ---- */
+  table.price{width:100%;border-collapse:collapse;font-size:.88rem;}
+  table.price th,table.price td{text-align:left;padding:13px 8px;border-bottom:1px solid var(--line);font-weight:400;}
+  table.price thead th{color:var(--ink-soft);font-size:.76rem;font-weight:700;}
+  .price-note{font-size:.78rem;color:var(--ink-soft);margin-top:14px;}
+
+  /* ---- company ---- */
+  table.company{width:100%;border-collapse:collapse;font-size:.88rem;}
+  table.company th,table.company td{text-align:left;padding:12px 8px;border-bottom:1px solid var(--line);vertical-align:top;font-weight:400;}
+  table.company th{width:8em;color:var(--ink-soft);font-size:.78rem;white-space:nowrap;}
+
+  .footer-cta{background:var(--wood);color:var(--on-wood);border-radius:4px;padding:38px 30px;margin-block:10px 36px;}
+  .footer-cta h2{font-size:1.4rem;color:var(--on-wood);font-family:"Klee One",serif;}
+  .footer-cta p{margin-top:12px;color:var(--on-wood);opacity:.9;font-size:.9rem;}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:2px;font-weight:700;font-size:.9rem;text-decoration:none;}
+  .footer-cta .btn.solid{background:var(--on-wood);color:var(--wood-deep);}
+  .footer-cta .btn.outline{border:1px solid var(--on-wood);color:var(--on-wood);}
+  .footer-cta .actions{display:flex;gap:12px;margin-top:22px;flex-wrap:wrap;}
+
+  footer.site{padding-block:18px 90px;font-size:.76rem;color:var(--ink-soft);border-top:1px solid var(--line);}
+
+  .sticky-cta{
+    position:fixed;left:0;right:0;bottom:0;display:none;
+    background:var(--wood);color:var(--on-wood);
+    padding-bottom:env(safe-area-inset-bottom,0px);z-index:20;
+  }
+  @media (max-width:640px){.sticky-cta{display:flex;}}
+  .sticky-cta a{
+    flex:1;display:flex;align-items:center;justify-content:center;gap:8px;
+    padding-block:15px;font-size:.86rem;font-weight:700;text-decoration:none;color:var(--on-wood);
+    border-right:1px solid rgba(0,0,0,.12);
+  }
+  .sticky-cta a:last-child{border-right:none;}
+  .sticky-cta a svg{width:15px;height:15px;}
+</style>
+
+<div class="sample-bar">こちらはご提案用のサンプルページです。実際の公開サイトではありません。</div>
+
+<div class="wrap">
+  <header class="site">
+    <div class="brand">ワカバヤシ工務店</div>
+    <a class="pill" href="tel:0782194344">
+      <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5c0-1 1-2 2-2h3l2 5-2 1a11 11 0 0 0 6 6l1-2 5 2v3c0 1-1 2-2 2A16 16 0 0 1 3 5z"/></svg>
+      078-219-4344
+    </a>
+  </header>
+
+  <div class="hero">
+    <div class="photo-slot">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="11" r="2"/><path d="M21 16l-5-5-4 4-3-3-5 5"/></svg>
+      <span class="hint">施工写真（差し替え予定）</span>
+    </div>
+    <div class="hero-copy">
+      <h1>わたしたちに<br>ちょうどいい家。</h1>
+      <p>数十年先も続く、暮らしに心地いい住まいを神戸市中央区エリアで。</p>
+    </div>
+  </div>
+  <div class="news-strip">
+    <span class="tag">お知らせ</span>
+    <p>ホームページをリニューアルいたしました。</p>
+  </div>
+
+  <section>
+    <div class="section-head">
+      <h2>選ばれる理由</h2>
+    </div>
+    <div class="reason-list">
+      <div class="reason-row">
+        <h3>設計と施工を自社一貫で</h3>
+        <p>設計士と職人が同じ会社にいるから、図面と現場のズレが起きにくく、要望がそのまま形になります。</p>
+      </div>
+      <div class="reason-row">
+        <h3>性能とデザイン、両方にこだわる</h3>
+        <p>断熱・気密などの性能を確保したうえで、暮らしやすい間取りと素材選びをご提案します。</p>
+      </div>
+      <div class="reason-row">
+        <h3>数十年先まで見据えた提案</h3>
+        <p>建てた時だけでなく、メンテナンスのしやすさまで考えた仕様でお応えします。</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head"><h2>対応できる工事</h2></div>
+    <div class="chip-row">
+      <span class="chip">注文住宅（新築）</span>
+      <span class="chip">増改築</span>
+      <span class="chip">全面リフォーム</span>
+      <span class="chip">水まわり</span>
+      <span class="chip">耐震補強</span>
+      <span class="chip">断熱改修</span>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <h2>施工実績</h2>
+      <p>現場の写真は施工完了ごとに差し替わります。まずは規模感と内容のみご案内します。</p>
+    </div>
+    <div class="works-grid">
+      <div class="work-card">
+        <div class="frame"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="11" r="2"/><path d="M21 16l-5-5-4 4-3-3-5 5"/></svg></div>
+        <h3>豊中市 平屋新築</h3>
+        <p class="meta">木造軸組・耐震等級3</p>
+        <div class="price">2,400万円〜</div>
+      </div>
+      <div class="work-card">
+        <div class="frame"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="11" r="2"/><path d="M21 16l-5-5-4 4-3-3-5 5"/></svg></div>
+        <h3>吹田市 全面リフォーム</h3>
+        <p class="meta">水まわり・断熱改修込み</p>
+        <div class="price">680万円〜</div>
+      </div>
+      <div class="work-card">
+        <div class="frame"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="11" r="2"/><path d="M21 16l-5-5-4 4-3-3-5 5"/></svg></div>
+        <h3>箕面市 増築</h3>
+        <p class="meta">子供部屋+2階増築</p>
+        <div class="price">450万円〜</div>
+      </div>
+      <div class="work-card">
+        <div class="frame"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="11" r="2"/><path d="M21 16l-5-5-4 4-3-3-5 5"/></svg></div>
+        <h3>池田市 耐震補強</h3>
+        <p class="meta">診断・補強工事一式</p>
+        <div class="price">120万円〜</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head"><h2>費用の目安</h2></div>
+    <table class="price">
+      <thead><tr><th>工事内容</th><th>費用目安</th></tr></thead>
+      <tbody>
+        <tr><td>注文住宅（延床30坪目安）</td><td>2,200万円〜2,800万円</td></tr>
+        <tr><td>全面リフォーム（水まわり込み）</td><td>500万円〜900万円</td></tr>
+        <tr><td>増築（6畳程度）</td><td>350万円〜550万円</td></tr>
+        <tr><td>耐震補強工事</td><td>80万円〜150万円</td></tr>
+      </tbody>
+    </table>
+    <p class="price-note">※上記は目安であり確定額ではありません。現地調査のうえ正式なお見積りをご提示します。</p>
+  </section>
+
+  <section id="contact">
+    <div class="footer-cta">
+      <h2>まずは、暮らし方からお聞かせください。</h2>
+      <p>新築・リフォームどちらのご相談も、間取りより先に暮らし方をお伺いします。</p>
+      <div class="actions">
+        <a class="btn solid" href="tel:0782194344">電話で相談する 078-219-4344</a>
+        <a class="btn outline" href="#" onclick="return false;">お問い合わせフォーム</a>
+      </div>
+    </div>
+    <table class="company">
+      <tr><th>屋号</th><td>ワカバヤシ工務店（サンプル表記）</td></tr>
+      <tr><th>対応エリア</th><td>神戸市中央区周辺</td></tr>
+      <tr><th>受付時間</th><td>営業時間はお問い合わせ時にご確認ください</td></tr>
+    </table>
+  </section>
+
+  <footer class="site">© ワカバヤシ工務店（サンプル）｜本ページは営業提案用のテンプレートです。参考: 溝田建築設計株式会社（mizota-ks.com）</footer>
+</div>
+
+<div class="sticky-cta">
+  <a href="tel:0782194344">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5c0-1 1-2 2-2h3l2 5-2 1a11 11 0 0 0 6 6l1-2 5 2v3c0 1-1 2-2 2A16 16 0 0 1 3 5z"/></svg>
+    電話をかける
+  </a>
+  <a href="#" onclick="return false;">お問い合わせ</a>
+</div>

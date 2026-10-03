@@ -1,0 +1,245 @@
+<title>大阪電気機工（株） 設備管理帖</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="参考: 大坪電気株式会社（ohtsubo-e.com）。電気工事会社向けサンプルHP、ガラスパネル・精密系パターン。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F8F9FB;
+    --surface:#FFFFFF;
+    --ink:#1C2430;
+    --ink-soft:#6B7686;
+    --blue:#3D95FA;
+    --blue-deep:#2A76D6;
+    --line:#E2E7EE;
+    --on-blue:#FFFFFF;
+    --glass:rgba(255,255,255,.6);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#12161D;
+      --surface:#1A2029;
+      --ink:#EDF0F4;
+      --ink-soft:#98A2B0;
+      --blue:#5CA6FF;
+      --blue-deep:#3D95FA;
+      --line:#2A313C;
+      --on-blue:#0B1520;
+      --glass:rgba(255,255,255,.06);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#12161D;
+    --surface:#1A2029;
+    --ink:#EDF0F4;
+    --ink-soft:#98A2B0;
+    --blue:#5CA6FF;
+    --blue-deep:#3D95FA;
+    --line:#2A313C;
+    --on-blue:#0B1520;
+    --glass:rgba(255,255,255,.06);
+  }
+
+  *{box-sizing:border-box;}
+  body{
+    background:var(--bg);color:var(--ink);
+    font-family:"Zen Kaku Gothic New",sans-serif;line-height:1.85;
+    padding-inline:20px;-webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{margin:0;line-height:1.5;text-wrap:balance;font-weight:700;}
+  p{margin:0;}
+  a{color:inherit;}
+  img,svg{max-width:100%;display:block;}
+  .wrap{max-width:1040px;margin-inline:auto;}
+
+  .sample-bar{
+    position:relative;left:50%;width:100vw;margin-left:-50vw;
+    background:var(--ink);color:var(--bg);
+    text-align:center;font-size:.78rem;padding-block:7px;font-weight:400;
+  }
+
+  header.site{display:flex;justify-content:space-between;align-items:center;padding-block:22px;gap:12px;flex-wrap:wrap;}
+  .brand{font-weight:900;font-size:1.1rem;}
+  .pill{
+    display:inline-flex;align-items:center;gap:8px;
+    background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:9px 18px;
+    font-size:.84rem;text-decoration:none;font-weight:700;
+  }
+
+  /* ---- glass hero ---- */
+  .hero{
+    position:relative;padding-block:50px 60px;text-align:center;
+    background:linear-gradient(160deg, var(--bg), var(--surface));
+    border-radius:4px;overflow:hidden;
+  }
+  .glass-card{
+    max-width:520px;margin-inline:auto;
+    background:var(--glass);backdrop-filter:blur(18px);
+    border-radius:20px;
+    padding:44px 34px;box-shadow:0 20px 60px rgba(30,60,110,.12);
+  }
+  .hero h1{font-size:clamp(1.7rem,4.6vw,2.4rem);}
+  .hero .lede{margin-top:16px;color:var(--ink-soft);font-size:.9rem;font-weight:400;max-width:44ch;margin-inline:auto;}
+  .hero-cta{display:flex;justify-content:center;gap:12px;margin-top:26px;flex-wrap:wrap;}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:10px;
+    font-weight:700;font-size:.9rem;text-decoration:none;border:none;
+  }
+  .btn svg{width:16px;height:16px;}
+  .btn.blue{background:var(--blue);color:var(--on-blue);}
+  .btn.blue:hover{background:var(--blue-deep);}
+  .btn.outline{border:1.5px solid var(--ink);color:var(--ink);}
+
+  section{padding-block:52px;}
+  .section-head{max-width:56ch;margin-bottom:28px;}
+  .section-head h2{font-size:1.5rem;}
+  .section-head p{margin-top:8px;color:var(--ink-soft);font-size:.9rem;font-weight:400;}
+
+  /* ---- reasons: quiet rows, elevation via border only ---- */
+  .reason-list{border-top:1px solid var(--line);}
+  .reason-row{padding-block:22px;border-bottom:1px solid var(--line);}
+  .reason-row h3{font-size:1rem;}
+  .reason-row p{margin-top:8px;font-size:.86rem;color:var(--ink-soft);font-weight:400;max-width:60ch;}
+
+  /* ---- services chips ---- */
+  .chip-row{display:flex;flex-wrap:wrap;gap:10px;}
+  .chip{padding:9px 18px;border-radius:10px;background:var(--surface);border:1px solid var(--line);font-size:.86rem;font-weight:700;}
+
+  /* ---- works: glass cards ---- */
+  .works-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
+  @media (max-width:700px){.works-grid{grid-template-columns:1fr;}}
+  .work-card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px;}
+  .work-card h3{font-size:1rem;}
+  .work-card .meta{margin-top:8px;font-size:.82rem;color:var(--ink-soft);font-weight:400;}
+  .work-card .price{margin-top:12px;font-weight:900;font-size:1.2rem;color:var(--blue-deep);font-variant-numeric:tabular-nums;}
+
+  /* ---- flow ---- */
+  .flow-row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+  @media (max-width:820px){.flow-row{grid-template-columns:1fr;}}
+  .flow-num{
+    width:40px;height:40px;border-radius:10px;background:var(--blue);color:var(--on-blue);
+    display:flex;align-items:center;justify-content:center;font-weight:900;margin-bottom:10px;
+  }
+  .flow-row h3{font-size:.94rem;}
+  .flow-row p{margin-top:6px;font-size:.82rem;color:var(--ink-soft);font-weight:400;}
+
+  /* ---- company ---- */
+  table.company{width:100%;border-collapse:collapse;font-size:.88rem;}
+  table.company th,table.company td{text-align:left;padding:11px 6px;border-bottom:1px solid var(--line);vertical-align:top;font-weight:400;}
+  table.company th{width:8em;color:var(--ink-soft);font-weight:700;font-size:.78rem;white-space:nowrap;}
+
+  .footer-cta{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:36px 28px;margin-block:10px 36px;text-align:center;}
+  .footer-cta h2{font-size:1.4rem;}
+  .footer-cta p{margin-top:10px;color:var(--ink-soft);font-size:.9rem;font-weight:400;}
+  .footer-cta .hero-cta{margin-top:22px;}
+
+  footer.site{padding-block:16px 90px;font-size:.76rem;color:var(--ink-soft);}
+
+  .sticky-cta{
+    position:fixed;left:16px;right:16px;bottom:14px;display:none;gap:10px;z-index:20;
+    padding-bottom:env(safe-area-inset-bottom,0px);
+  }
+  @media (max-width:640px){.sticky-cta{display:flex;}}
+  .sticky-cta a{
+    flex:1;display:flex;align-items:center;justify-content:center;gap:7px;
+    padding-block:14px;border-radius:12px;font-weight:900;font-size:.88rem;
+    text-decoration:none;box-shadow:0 6px 18px rgba(30,60,110,.2);
+  }
+  .sticky-cta a svg{width:16px;height:16px;}
+  .sticky-cta .call{background:var(--blue);color:var(--on-blue);}
+  .sticky-cta .line{background:var(--ink);color:var(--bg);}
+</style>
+
+<div class="sample-bar">こちらはご提案用のサンプルページです。実際の公開サイトではありません。</div>
+
+<div class="wrap">
+  <header class="site">
+    <div class="brand">大阪電気機工（株）</div>
+    <a class="pill" href="https://www.google.com/maps/place/?q=place_id:ChIJqRhIBBzeAGAREcbrfUv5enk">
+      <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5c0-1 1-2 2-2h3l2 5-2 1a11 11 0 0 0 6 6l1-2 5 2v3c0 1-1 2-2 2A16 16 0 0 1 3 5z"/></svg>
+      Google Mapsで確認する
+    </a>
+  </header>
+
+  <div class="hero">
+    <div class="glass-card">
+      <h1>電気・空調・給排水を、<br>専門性で支える。</h1>
+      <p class="lede">住宅から店舗まで、電気設備の新設・更新・トラブル対応を大阪市生野区エリアで承ります。</p>
+      <div class="hero-cta">
+        <a class="btn blue" href="https://www.google.com/maps/place/?q=place_id:ChIJqRhIBBzeAGAREcbrfUv5enk">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5c0-1 1-2 2-2h3l2 5-2 1a11 11 0 0 0 6 6l1-2 5 2v3c0 1-1 2-2 2A16 16 0 0 1 3 5z"/></svg>
+          Google Mapsで相談する
+        </a>
+        <a class="btn outline" href="#" onclick="return false;">LINEで相談する</a>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <div class="section-head"><h2>選ばれる理由</h2></div>
+    <div class="reason-list">
+      <div class="reason-row"><h3>電気・空調・給排水を横断対応</h3><p>設備トラブルは原因が複数の分野にまたがることがあります。窓口を一本化できます。</p></div>
+      <div class="reason-row"><h3>着工前に工事範囲を書面で明示</h3><p>「一式」でまとめず、作業内容ごとに金額と範囲をご説明します。</p></div>
+      <div class="reason-row"><h3>緊急のトラブルにも対応</h3><p>停電・漏電など急を要するご相談も、まずはお電話ください。</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head"><h2>対応できる工事</h2></div>
+    <div class="chip-row">
+      <span class="chip">コンセント・照明工事</span>
+      <span class="chip">分電盤・幹線工事</span>
+      <span class="chip">エアコン電気工事</span>
+      <span class="chip">換気・給排水設備</span>
+      <span class="chip">EV充電設備</span>
+      <span class="chip">高圧・動力設備</span>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head"><h2>施工実績</h2></div>
+    <div class="works-grid">
+      <div class="work-card"><h3>豊中市 K様邸</h3><p class="meta">分電盤交換</p><div class="price">4.5万円〜</div></div>
+      <div class="work-card"><h3>吹田市 M様邸</h3><p class="meta">エアコン専用回路増設</p><div class="price">3.2万円〜</div></div>
+      <div class="work-card"><h3>箕面市 店舗</h3><p class="meta">動力設備新設</p><div class="price">18万円〜</div></div>
+      <div class="work-card"><h3>池田市 T様邸</h3><p class="meta">EV用200Vコンセント新設</p><div class="price">5.5万円〜</div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head"><h2>ご依頼の流れ</h2></div>
+    <div class="flow-row">
+      <div><div class="flow-num">1</div><h3>お問い合わせ</h3><p>電話・LINE・フォームから。緊急時はお電話が確実です。</p></div>
+      <div><div class="flow-num">2</div><h3>現地確認</h3><p>設備の状態と原因を確認します。</p></div>
+      <div><div class="flow-num">3</div><h3>お見積り</h3><p>作業範囲ごとの金額をご説明します。</p></div>
+      <div><div class="flow-num">4</div><h3>施工・アフター</h3><p>作業後の動作確認まで行います。</p></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="footer-cta">
+      <h2>まずは、設備の状態からご相談ください。</h2>
+      <p>電気・空調・給排水、どの分野の相談か分からなくても大丈夫です。</p>
+      <div class="hero-cta">
+        <a class="btn blue" href="https://www.google.com/maps/place/?q=place_id:ChIJqRhIBBzeAGAREcbrfUv5enk">Google Mapsで相談する</a>
+        <a class="btn outline" href="#" onclick="return false;">LINEで相談する</a>
+      </div>
+    </div>
+    <table class="company">
+      <tr><th>屋号</th><td>大阪電気機工（株）（サンプル表記）</td></tr>
+      <tr><th>対応エリア</th><td>大阪市生野区周辺</td></tr>
+      <tr><th>受付時間</th><td>営業時間はお問い合わせ時にご確認ください</td></tr>
+    </table>
+  </section>
+
+  <footer class="site">© 大阪電気機工（株）（サンプル）｜本ページは営業提案用のテンプレートです。参考: 大坪電気株式会社（ohtsubo-e.com）</footer>
+</div>
+
+<div class="sticky-cta">
+  <a class="call" href="https://www.google.com/maps/place/?q=place_id:ChIJqRhIBBzeAGAREcbrfUv5enk">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5c0-1 1-2 2-2h3l2 5-2 1a11 11 0 0 0 6 6l1-2 5 2v3c0 1-1 2-2 2A16 16 0 0 1 3 5z"/></svg>
+    Google Mapsを開く
+  </a>
+  <a class="line" href="#" onclick="return false;">LINEで相談</a>
+</div>

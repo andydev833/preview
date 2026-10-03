@@ -1,0 +1,253 @@
+<title>株式会社T'plus 電気施工記録</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="参考: 音更電設株式会社（otoden.co.jp）。電気工事会社向けサンプルHP、大胆タイポグラフィ系パターン。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FFFFFF;
+    --surface:#F4F4F3;
+    --ink:#1A1A18;
+    --ink-soft:#6B6A66;
+    --yellow:#E0BE00;
+    --yellow-deep:#B79600;
+    --line:#E5E5E3;
+    --on-yellow:#1A1A18;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#19191A;
+      --surface:#242425;
+      --ink:#F0EFEC;
+      --ink-soft:#A6A49D;
+      --yellow:#F0CF33;
+      --yellow-deep:#D1B316;
+      --line:#37373A;
+      --on-yellow:#19191A;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#19191A;
+    --surface:#242425;
+    --ink:#F0EFEC;
+    --ink-soft:#A6A49D;
+    --yellow:#F0CF33;
+    --yellow-deep:#D1B316;
+    --line:#37373A;
+    --on-yellow:#19191A;
+  }
+
+  *{box-sizing:border-box;}
+  body{
+    background:var(--bg);color:var(--ink);
+    font-family:"Noto Sans JP",sans-serif;line-height:1.85;
+    padding-inline:20px;-webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:900;margin:0;line-height:1.2;text-wrap:balance;}
+  p{margin:0;}
+  a{color:inherit;}
+  img,svg{max-width:100%;display:block;}
+  .wrap{max-width:1040px;margin-inline:auto;}
+
+  .sample-bar{
+    position:relative;left:50%;width:100vw;margin-left:-50vw;
+    background:var(--ink);color:var(--bg);
+    text-align:center;font-size:.78rem;padding-block:7px;font-family:"Noto Sans JP";font-weight:400;
+  }
+
+  header.site{display:flex;justify-content:space-between;align-items:center;padding-block:22px;gap:12px;flex-wrap:wrap;}
+  .brand{font-family:"Zen Kaku Gothic New";font-weight:900;font-size:1.05rem;}
+  .pill{
+    display:inline-flex;align-items:center;gap:8px;
+    border:1.5px solid var(--ink);border-radius:999px;padding:9px 18px;
+    font-size:.84rem;text-decoration:none;font-weight:700;
+  }
+
+  /* ---- bold typographic hero ---- */
+  .hero{padding-block:20px 10px;}
+  .hero .kicker{font-size:.86rem;color:var(--ink-soft);font-weight:500;}
+  .hero h1{
+    font-size:clamp(2.6rem,9vw,5.2rem);letter-spacing:-.02em;
+    margin-top:6px;
+  }
+  .hero .dot{color:var(--yellow-deep);}
+  .hero .lede{margin-top:20px;color:var(--ink-soft);font-size:.92rem;max-width:46ch;font-family:"Noto Sans JP";font-weight:400;}
+  .hero-cta{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap;}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:2px;
+    font-weight:700;font-size:.9rem;text-decoration:none;border:none;font-family:"Noto Sans JP";
+  }
+  .btn svg{width:16px;height:16px;}
+  .btn.yellow{background:var(--yellow);color:var(--on-yellow);}
+  .btn.yellow:hover{background:var(--yellow-deep);}
+  .btn.outline{border:1.5px solid var(--ink);color:var(--ink);}
+
+  /* ---- pole/wire skyline divider ---- */
+  .line-wrap{
+    position:relative;left:50%;width:100vw;margin-left:-50vw;
+    height:96px;overflow:hidden;background:var(--surface);margin-top:32px;
+  }
+  .line-wrap svg{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:1400px;height:100%;}
+
+  section{padding-block:52px;}
+  .section-head{max-width:56ch;margin-bottom:28px;}
+  .section-head .en{font-size:.78rem;color:var(--ink-soft);font-family:"Noto Sans JP";letter-spacing:.02em;}
+  .section-head h2{font-size:1.5rem;margin-top:6px;}
+  .section-head p{margin-top:8px;color:var(--ink-soft);font-size:.9rem;font-family:"Noto Sans JP";font-weight:400;}
+
+  /* ---- services numbered (real ordered category list) ---- */
+  .svc-list{border-top:1px solid var(--line);}
+  .svc-row{display:grid;grid-template-columns:60px 1fr;gap:20px;padding-block:24px;border-bottom:1px solid var(--line);}
+  .svc-row .num{font-family:"Zen Kaku Gothic New";font-weight:900;color:var(--yellow-deep);font-size:1.1rem;}
+  .svc-row h3{font-size:1.02rem;font-weight:700;font-family:"Noto Sans JP";}
+  .svc-row p{margin-top:8px;font-size:.86rem;color:var(--ink-soft);max-width:60ch;font-family:"Noto Sans JP";font-weight:400;}
+
+  /* ---- works: placeholder frames ---- */
+  .works-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:var(--line);border:1px solid var(--line);}
+  @media (max-width:700px){.works-grid{grid-template-columns:1fr;}}
+  .work-item{background:var(--bg);padding:22px;}
+  .photo-slot{
+    aspect-ratio:4/3;border:1px dashed var(--line);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    gap:8px;color:var(--ink-soft);font-size:.72rem;margin-bottom:14px;
+  }
+  .photo-slot svg{width:26px;height:26px;stroke:var(--ink-soft);}
+  .work-item h3{font-size:.98rem;font-weight:700;font-family:"Noto Sans JP";}
+  .work-item .meta{margin-top:8px;font-size:.8rem;color:var(--ink-soft);font-family:"Noto Sans JP";font-weight:400;}
+  .work-item .price{margin-top:10px;font-weight:700;font-size:1.1rem;color:var(--yellow-deep);font-variant-numeric:tabular-nums;font-family:"Noto Sans JP";}
+
+  /* ---- company ---- */
+  table.company{width:100%;border-collapse:collapse;font-size:.88rem;font-family:"Noto Sans JP";}
+  table.company th,table.company td{text-align:left;padding:12px 8px;border-bottom:1px solid var(--line);vertical-align:top;font-weight:400;}
+  table.company th{width:8em;color:var(--ink-soft);font-size:.78rem;white-space:nowrap;}
+
+  .footer-cta{border:1.5px solid var(--ink);padding:38px 30px;margin-block:10px 36px;}
+  .footer-cta h2{font-size:1.5rem;}
+  .footer-cta p{margin-top:12px;color:var(--ink-soft);font-size:.9rem;font-family:"Noto Sans JP";font-weight:400;}
+  .footer-cta .hero-cta{margin-top:24px;}
+
+  footer.site{padding-block:18px 90px;font-size:.76rem;color:var(--ink-soft);border-top:1px solid var(--line);font-family:"Noto Sans JP";}
+
+  .sticky-cta{
+    position:fixed;left:0;right:0;bottom:0;display:none;
+    background:var(--ink);color:var(--bg);
+    padding-bottom:env(safe-area-inset-bottom,0px);z-index:20;
+  }
+  @media (max-width:640px){.sticky-cta{display:flex;}}
+  .sticky-cta a{
+    flex:1;display:flex;align-items:center;justify-content:center;gap:8px;
+    padding-block:15px;font-size:.86rem;font-weight:700;text-decoration:none;color:var(--bg);
+    border-right:1px solid rgba(255,255,255,.15);font-family:"Noto Sans JP";
+  }
+  .sticky-cta a:last-child{border-right:none;}
+  .sticky-cta a svg{width:15px;height:15px;}
+</style>
+
+<div class="sample-bar">こちらはご提案用のサンプルページです。実際の公開サイトではありません。</div>
+
+<div class="wrap">
+  <header class="site">
+    <div class="brand">株式会社T'plus</div>
+    <a class="pill" href="tel:0787623383">078-762-3383</a>
+  </header>
+
+  <div class="hero">
+    <p class="kicker">北摂の暮らしを、通す。</p>
+    <h1>HOKUSETSU<br>LIGHT<span class="dot">.</span></h1>
+    <p class="lede">コンセントの増設から分電盤の更新、EV充電用の配線まで。神戸市灘区エリアの一戸建て・店舗の電気工事を担当します。</p>
+    <div class="hero-cta">
+      <a class="btn yellow" href="tel:0787623383">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5c0-1 1-2 2-2h3l2 5-2 1a11 11 0 0 0 6 6l1-2 5 2v3c0 1-1 2-2 2A16 16 0 0 1 3 5z"/></svg>
+        電話で相談する
+      </a>
+      <a class="btn outline" href="#" onclick="return false;">LINEで相談する</a>
+    </div>
+  </div>
+
+  <div class="line-wrap" aria-hidden="true">
+    <svg viewBox="0 0 1400 96" preserveAspectRatio="xMidYMax slice">
+      <g style="stroke:var(--ink)" stroke-width="2" opacity=".55">
+        <line x1="60" y1="10" x2="60" y2="96"/>
+        <line x1="0" y1="26" x2="1400" y2="26"/>
+        <line x1="0" y1="40" x2="1400" y2="46"/>
+        <line x1="420" y1="10" x2="420" y2="96"/>
+        <line x1="780" y1="10" x2="780" y2="96"/>
+        <line x1="1140" y1="10" x2="1140" y2="96"/>
+      </g>
+      <g style="fill:var(--yellow)">
+        <circle cx="60" cy="14" r="5"/>
+        <circle cx="420" cy="14" r="5"/>
+        <circle cx="780" cy="14" r="5"/>
+        <circle cx="1140" cy="14" r="5"/>
+      </g>
+    </svg>
+  </div>
+
+  <section>
+    <div class="section-head"><span class="en">Service</span><h2>対応できる工事</h2></div>
+    <div class="svc-list">
+      <div class="svc-row"><div class="num">01</div><div><h3>コンセント・照明工事</h3><p>コンセントの増設、照明のダウンライト化などの小規模工事に対応します。</p></div></div>
+      <div class="svc-row"><div class="num">02</div><div><h3>分電盤・幹線工事</h3><p>古い分電盤の更新や、契約アンペア変更に伴う幹線の引き直しを行います。</p></div></div>
+      <div class="svc-row"><div class="num">03</div><div><h3>エアコン・家電の電気工事</h3><p>エアコン新設に伴う専用回路の増設、家電の電気まわり工事に対応します。</p></div></div>
+      <div class="svc-row"><div class="num">04</div><div><h3>EV充電・太陽光関連配線</h3><p>EV用200Vコンセントの新設、太陽光発電の連系工事にも対応します。</p></div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head"><span class="en">Works</span><h2>施工事例</h2></div>
+    <p style="color:var(--ink-soft);font-size:.9rem;font-family:'Noto Sans JP';">現場の写真は施工完了ごとに差し替わります。</p>
+    <div class="works-grid" style="margin-top:20px;">
+      <div class="work-item">
+        <div class="photo-slot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="11" r="2"/><path d="M21 16l-5-5-4 4-3-3-5 5"/></svg>施工写真（差し替え予定）</div>
+        <h3>豊中市 K様邸</h3>
+        <p class="meta">分電盤交換</p>
+        <div class="price">4.5万円〜</div>
+      </div>
+      <div class="work-item">
+        <div class="photo-slot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="11" r="2"/><path d="M21 16l-5-5-4 4-3-3-5 5"/></svg>施工写真（差し替え予定）</div>
+        <h3>吹田市 M様邸</h3>
+        <p class="meta">エアコン専用回路増設</p>
+        <div class="price">3.2万円〜</div>
+      </div>
+      <div class="work-item">
+        <div class="photo-slot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="11" r="2"/><path d="M21 16l-5-5-4 4-3-3-5 5"/></svg>施工写真（差し替え予定）</div>
+        <h3>箕面市 S様邸</h3>
+        <p class="meta">ダウンライト化工事</p>
+        <div class="price">6万円〜</div>
+      </div>
+      <div class="work-item">
+        <div class="photo-slot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="11" r="2"/><path d="M21 16l-5-5-4 4-3-3-5 5"/></svg>施工写真（差し替え予定）</div>
+        <h3>池田市 T様邸</h3>
+        <p class="meta">EV用200Vコンセント新設</p>
+        <div class="price">5.5万円〜</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="footer-cta">
+      <h2>まずは、配線図を見に伺います。</h2>
+      <p>小さな電気工事のご相談も、まずは現地を確認するところから始めます。</p>
+      <div class="hero-cta">
+        <a class="btn yellow" href="tel:0787623383">電話で相談する 078-762-3383</a>
+        <a class="btn outline" href="#" onclick="return false;">LINEで相談する</a>
+      </div>
+    </div>
+    <table class="company">
+      <tr><th>屋号</th><td>株式会社T'plus（サンプル表記）</td></tr>
+      <tr><th>対応エリア</th><td>神戸市灘区周辺</td></tr>
+      <tr><th>受付時間</th><td>営業時間はお問い合わせ時にご確認ください</td></tr>
+    </table>
+  </section>
+
+  <footer class="site">© 株式会社T'plus（サンプル）｜本ページは営業提案用のテンプレートです。参考: 音更電設株式会社（otoden.co.jp）</footer>
+</div>
+
+<div class="sticky-cta">
+  <a href="tel:0787623383">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5c0-1 1-2 2-2h3l2 5-2 1a11 11 0 0 0 6 6l1-2 5 2v3c0 1-1 2-2 2A16 16 0 0 1 3 5z"/></svg>
+    電話をかける
+  </a>
+  <a href="#" onclick="return false;">LINEで相談</a>
+</div>
